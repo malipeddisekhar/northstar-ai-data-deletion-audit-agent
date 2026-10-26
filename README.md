@@ -155,3 +155,41 @@ Before submitting, confirm that:
 - `code.zip` includes your runnable code, `README.md`, `code/evaluation/evaluation_report.md`, and `code/evaluation/usage_report.md`;
 - `log.txt` follows the `AGENTS.md` turn format and is uploaded to the `chat_transcript` slot; and
 - no API keys, credentials, real personal data, or sensitive configuration values are included.
+
+---
+
+## Running the Application
+
+### 1. Run the Full Python Audit Pipeline (Generates `output.csv`)
+```bash
+python code/main.py
+```
+
+### 2. Run Benchmark Evaluation
+```bash
+python code/evaluation/main.py
+```
+
+### 3. Launch the FastAPI Backend
+```bash
+cd code
+python -m uvicorn api:app --host 0.0.0.0 --port 8000 --reload
+```
+
+### 4. Launch the Enterprise React Frontend
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+---
+
+## Author & Developer Credit
+
+**Designed & Developed by Malipeddi Sekhar**  
+AI/ML Engineering Student  
+GMR Institute of Technology  
+Project: Northstar Shop — AI Data Deletion Audit Agent (v2.4.0)  
+HackerRank Orchestrate October 2026
+
